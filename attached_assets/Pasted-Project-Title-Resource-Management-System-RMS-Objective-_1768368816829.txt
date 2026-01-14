@@ -1,0 +1,202 @@
+Project Title
+
+Resource Management System (RMS)
+
+Objective
+
+Design and implement a scalable, extensible Resource Management System to manage employee/resource details, project allocations, and billing-related information. The system must support future expansion without major refactoring.
+
+Core Requirements
+1. System Architecture
+
+Backend: Python (preferably FastAPI or Flask)
+
+Database: MongoDB (schema designed for flexibility and extensibility)
+
+Frontend/UI: Minimal, modern, and futuristic
+
+Glassmorphism-based UI (blurred glass panels, soft shadows, subtle gradients)
+
+Color Palette:
+
+Deep Red (primary accent)
+
+Dark Grey
+
+Black
+
+Neutral light tones only where required for contrast
+
+Clean typography with high readability
+
+No clutter — focus on data clarity and usability
+
+Design Philosophy:
+
+Modular
+
+Loosely coupled
+
+Easy to extend with new fields, sections, or modules in the future
+
+2. Data Model Design
+
+⚠️ Avoid duplication — any repeated fields across sections must exist only once and be referenced where needed.
+
+A. Resource / Employee Information
+
+Each resource must have a unique identifier.
+
+Required Fields:
+
+Resource ID / Employee ID (unique)
+
+Employee Name
+
+Date of Joining
+
+Official Email (RBM Email)
+
+Contact Number
+
+Address
+
+Location
+
+City
+
+Country
+
+Primary Skill
+
+Secondary Skill(s)
+
+Total Experience (Years)
+
+Availability Status
+
+100%
+
+50%
+
+Bench
+
+Employment Status
+
+Active
+
+On Leave
+
+Exited
+
+Resource Type
+
+RBM
+
+RBM Contractor
+
+Non-RBM
+
+Client Email (if applicable)
+
+B. Project & Allocation Information
+
+Each resource can be associated with multiple projects.
+
+Required Fields:
+
+Project Name / POD Name
+
+Client Name
+
+Role on Project
+
+Project Status
+
+Active
+
+On Hold
+
+Closed
+
+Project Start Date
+
+Billing Start Date
+
+Billing End Date
+
+Allocation Percentage (e.g., 50%, 100%)
+
+Billable (Yes / No)
+
+Timesheet Required (Yes / No)
+
+Billing Rate
+
+Optional
+
+Masked based on user role
+
+Billing Project (Yes / No)
+
+Current Location (if different from base location)
+
+Client Project Manager
+
+RBM Project Manager
+
+Notes / Remarks
+
+3. Functional Requirements
+
+CRUD operations for:
+
+Resources
+
+Projects
+
+Allocations
+
+Support multiple projects per resource
+
+Support partial allocations (e.g., one resource split across projects)
+
+Allow future addition of:
+
+New fields
+
+New sections (e.g., certifications, performance, compliance)
+
+New resource types or statuses
+
+Role-based visibility (e.g., hide billing rate for non-authorized users)
+
+4. Non-Functional Requirements
+
+Clean, readable, maintainable code
+
+Clear separation of concerns (models, services, controllers)
+
+MongoDB collections designed with references instead of duplication
+
+API-first approach (RESTful or GraphQL-ready)
+
+Easily editable and theme-aware UI components
+
+5. Expected Output
+
+Database schema / collection design
+
+Backend API structure (endpoints + models)
+
+Minimal futuristic UI layout using deep red, grey, and black palette
+
+Codebase structured for long-term maintainability
+
+Important Notes
+
+If a field appears in multiple sections, define it once and reference it
+
+Design everything assuming new requirements will be added later
+
+Avoid hardcoding enums — keep them configurable and data-driven
